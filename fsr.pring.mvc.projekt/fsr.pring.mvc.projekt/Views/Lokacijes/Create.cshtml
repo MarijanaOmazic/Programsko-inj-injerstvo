@@ -1,0 +1,49 @@
+﻿@model fsr.pring.mvc.projekt.Models.Lokacije
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Lokacije</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LokacijaTipId" class="control-label"></label>
+                <select asp-for="LokacijaTipId" class="form-control" asp-items="ViewBag.LokacijaTipId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartnerId" class="control-label"></label>
+                <select asp-for="PartnerId" class="form-control" asp-items="ViewBag.PartnerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Koordinate" class="control-label"></label>
+                <select asp-for="Koordinate" class="form-control" asp-items="ViewBag.Koordinate"></select>
+                <span asp-validation-for="Koordinate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GPS" class="control-label"></label>
+                <select asp-for="GPS" class="form-control" asp-items="ViewBag.GPS"></select>
+                <span asp-validation-for="GPS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LokacijaKategorijaId" class="control-label"></label>
+                <select asp-for="LokacijaKategorijaId" class="form-control" asp-items="ViewBag.LokacijaKategorijaId"></select>
+                <span asp-validation-for="LokacijaKategorijaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
